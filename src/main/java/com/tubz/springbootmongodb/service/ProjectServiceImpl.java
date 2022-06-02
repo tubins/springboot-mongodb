@@ -4,7 +4,9 @@ import com.tubz.springbootmongodb.models.Project;
 import com.tubz.springbootmongodb.models.Task;
 import com.tubz.springbootmongodb.repository.ProjectRepository;
 import com.tubz.springbootmongodb.repository.TaskRepository;
+import org.springframework.stereotype.Service;
 
+@Service
 public class ProjectServiceImpl implements ProjectService {
 
     private final ProjectRepository projectRepository;
