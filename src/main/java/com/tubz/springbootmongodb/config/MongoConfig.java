@@ -32,7 +32,7 @@ public class MongoConfig extends AbstractMongoClientConfiguration {
     @Override
     public MongoClient mongoClient() {
         return MongoClients.create("mongodb://" + username + ":" + password + "@" + primary + ":" + port + "/" + database
-                + "?replicaSet=" + replicaSet + "&authSource=" + authenticationDatabase + "maxPoolSize=" + maxPoolSize + "&authMechanism=" + authMechanism + "&ssl=false");
+                + "?replicaSet=" + replicaSet + "&authSource=" + authenticationDatabase + "&maxPoolSize=" + maxPoolSize + "&authMechanism=" + authMechanism + "&ssl=false");
     }
 
     @Override
