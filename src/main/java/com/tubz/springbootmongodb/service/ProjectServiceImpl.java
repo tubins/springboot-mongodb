@@ -26,4 +26,22 @@ public class ProjectServiceImpl implements ProjectService {
     public void saveTask(Task task) {
         taskRepository.save(task);
     }
+
+
+    @Override
+    public Project findProject(String id) {
+        return projectRepository.findById(id).orElseThrow(() -> new RuntimeException("Project Not found"));
+    }
+
+    @Override
+    public Task findTask(String id) {
+        return taskRepository.findById(id).orElseThrow(() -> new RuntimeException("Task Not found"));
+    }
+
+    @Override
+    public void deleteTask(String id) {
+        Task t = taskRepository.findById(id).orElseThrow(() -> new RuntimeException("Task Not found"));
+        taskRepository.delete(t);
+    }
+
 }
